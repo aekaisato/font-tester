@@ -43,6 +43,7 @@ function App() {
 
   return (
     <div className="flex w-full justify-center items-center p-4 flex-col">
+      <h1 className="text-lg font-bold mb-3">Multi Font Tester — MiFT</h1>
       <div className="flex w-full flex-row justify-evenly items-center">
         <div {...getRootProps()} className="bg-gray-300 p-3 rounded">
           <input {...getInputProps()} />
@@ -64,7 +65,7 @@ function App() {
           <label>{fontSize}</label>
         </div>
       </div>
-      <div className="mt-5 p-5" id="fontResults">
+      <div className="p-5" id="fontResults">
         {fonts.map((value) => (
           <div key={value.strippedFileName}>
             <p>{value.name}</p>
@@ -83,7 +84,7 @@ function App() {
           link.href = canvas.toDataURL();
           link.click();
           link.remove();
-        }}/>
+        }} title="i recommend to manually take a screenshot instead; html2canvas is pretty wonky with text"/>
       </div>
       : <div/>
       }
